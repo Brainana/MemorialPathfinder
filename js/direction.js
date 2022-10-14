@@ -129,7 +129,10 @@ function generateGoogleMapUrl(distanceMatrixResponse, shortestPermutation, trave
     }
     shortestPathUrl += "&travelmode=" + travelMode;
     shortestPathUrl = encodeURI(shortestPathUrl);
-    window.open(shortestPathUrl, "_blank");
+
+    let startNavigation =  document.querySelector("#start-navigation");
+    startNavigation.href = shortestPathUrl;
+    // window.open(shortestPathUrl, "_blank");
 }
 
 function createDirectionDiv(id) {
@@ -143,7 +146,7 @@ function createDirectionDiv(id) {
 
 function renderShortestPath(shortestPermutation) {
     var memorialId = destIdx2MemorialId[shortestPermutation[0]];
-    startingPointMarker.setIcon("./images/1.JPG");
+    startingPointMarker.setIcon("../images/1.JPG");
     var directionDivId = createDirectionDiv("start");
     let startingPoint =  document.querySelector("#startingPoint");
     renderRoute({latLng: startingPointLocation, name: startingPoint.value}, memorialSelected[memorialId], directionDivId), 1;
@@ -152,14 +155,14 @@ function renderShortestPath(shortestPermutation) {
         var memorialAId = destIdx2MemorialId[shortestPermutation[i]];
         var memorialBId = destIdx2MemorialId[shortestPermutation[i+1]];
         var number = i+2;
-        memorialSelected[memorialAId].marker.setIcon("./images/" + number.toString() + ".JPG")
+        memorialSelected[memorialAId].marker.setIcon("../images/" + number.toString() + ".JPG")
         var directionDivId = createDirectionDiv(shortestPermutation[i].toString())
         renderRoute(memorialSelected[memorialAId], memorialSelected[memorialBId], directionDivId);
     }
 
     var number = shortestPermutation.length + 1;
     var memorialId = destIdx2MemorialId[shortestPermutation[shortestPermutation.length-1]];
-    memorialSelected[memorialId].marker.setIcon("./images/" + number.toString() + ".JPG");   
+    memorialSelected[memorialId].marker.setIcon("../images/" + number.toString() + ".JPG");   
     var directionDivId = createDirectionDiv(shortestPermutation[shortestPermutation.length-1].toString());
     renderLastDestination(memorialSelected[memorialId], directionDivId);
 }
