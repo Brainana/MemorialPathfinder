@@ -60,7 +60,7 @@ function onLocateMe() {
         var startingPoint = document.querySelector("#startingPoint");
 
         startingPoint.classList = "form-control";
-        startingPoint.value = "Your Location";
+        startingPoint.value = "Current Location";
         startingPointLocation = {
             lat: crd.latitude,
             lng: crd.longitude
@@ -70,6 +70,14 @@ function onLocateMe() {
             position: startingPointLocation,
             map: window.map,
         });
+
+        let geocoder = new google.maps.Geocoder();
+        geocoder.geocode({ location: startingPointLocation })
+        .then((response) => {
+          if (response.results[0]) {
+            startingPoint.value = response.results[0].formatted_address;
+          }
+        })
     
     }
 
