@@ -1,0 +1,51 @@
+#directions-panel {
+    max-width: 345px;
+}
+
+#directions {
+    overflow: auto;
+    min-height: 400px;
+    height: calc(100% - 70px);
+}
+
+.direction {
+    margin-top: 20px;
+}
+
+.distance-grey-line {
+    border-bottom: 1px solid rgb(218,220,224);
+}
+
+.distance-text {
+    display: inline-block;
+    position: absolute;
+    top: -14px;
+    background-color: #fff;
+    padding-right: 5px;
+    z-index: 1;
+}
+
+.distance {
+    position: relative;
+    z-index: 1;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    padding-bottom: 10px;
+}
+
+.instructions {
+    padding-bottom: 10px;
+}
+
+.turn-right {
+    transform: scaleX(-1);
+}
+
+.step {
+    padding-left: 10px;
+}
+
+.start-address {
+    padding-top: 10px;
+}
+
