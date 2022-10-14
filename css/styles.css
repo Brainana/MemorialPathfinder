@@ -1,0 +1,78 @@
+/* .travel-mode
+{
+    border-radius: 1px;
+    border-width: 0px;
+} */
+
+html,body{
+    height:100%;
+}
+
+.flex-fill {
+    flex:1;
+}
+
+.main-panel {
+    overflow: auto;
+}
+
+#left-panel {
+    min-width: 345px;
+}
+
+#right-panel {
+    min-width: 650px;
+}
+
+.google-map-button {
+    width: 50px;
+    display: none;
+}
+
+.locate-me-icon::before {
+    background-image: url('../images/locate_me.png');
+    background-size: 20px 20px;
+    display: inline-block;
+    width: 20px; 
+    height: 20px;
+    content:"";
+    margin-top: 2px;
+}
+
+@media only screen and (max-width: 770px) {
+    /* body {
+      background-color: lightblue;
+    } */
+
+    .google-map-button {
+        display: block;
+    }
+
+    #left-panel {
+        width: 100%;
+    }
+
+    #memorial-types {
+        max-width: 100% !important;
+    }
+
+    #directions-panel {
+        max-width: 100% !important;
+    }
+
+    #right-panel {
+        display: none;
+    }
+
+    #hide_map_view {
+        display: block !important;
+    }
+
+    #right-panel .back-to-location-picker {
+        position: relative;
+        top: 50px;
+        left: 205px;
+        z-index: 1;
+    }
+    
+}
