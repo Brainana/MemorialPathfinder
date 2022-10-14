@@ -1,7 +1,7 @@
 
 var memorialTypeCode2Name = {};
 
-fetch("./data/memorials.json")
+fetch("../data/memorials.json")
   .then(response => response.json())
   .then(function(json) {
     console.log(json);
@@ -72,6 +72,8 @@ function handleMemorialClick(memorialCheckBox) {
         memorialSelected[memorialCheckBox.id].marker.setMap(null);
         delete memorialSelected[memorialCheckBox.id];
     }
+
+    adjustMapBound();
 }
 
 function createMemorialsByType(memorialsByType) {
