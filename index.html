@@ -51,12 +51,16 @@
               </div>
               <div id="directions-panel" class="h-100" style="display:none">
                 <button class="back-to-location-picker btn btn-light" onclick="goBackToLocationPicker()">
-                  <img src="//maps.gstatic.com/consumer/images/icons/2x/arrow_back_grey800_24dp.png">
-                  <span class="fw-bolder text-dark">Back to Locations Picker</span>
+                  <img src="../images/back_arrow.png">
+                  <span class="fw-bolder text-dark">Locations picker</span>
                 </button>
-                <button class="btn btn-light float-end" onclick="switchToMapView(true)">
+                <a id="start-navigation" class="btn btn-light" href="#" role="button">
+                  <img src="../images/start_navigation.png">
+                  <span class="fw-bolder text-dark">Start navigation</span>
+                </a>
+                <!-- <button class="btn btn-light float-start" onclick="switchToMapView(true)">
                   <img class="google-map-button" src="./images/google_map.png"/>
-                </button>
+                </button> -->
                 <div id="directions" class="w-100"></div>
               </div>
             </div>
