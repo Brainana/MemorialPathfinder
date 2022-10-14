@@ -146,7 +146,7 @@ function createDirectionDiv(id) {
 
 function renderShortestPath(shortestPermutation) {
     var memorialId = destIdx2MemorialId[shortestPermutation[0]];
-    startingPointMarker.setIcon("../images/1.JPG");
+    startingPointMarker.setIcon("./images/1.JPG");
     var directionDivId = createDirectionDiv("start");
     let startingPoint =  document.querySelector("#startingPoint");
     renderRoute({latLng: startingPointLocation, name: startingPoint.value}, memorialSelected[memorialId], directionDivId), 1;
@@ -155,14 +155,14 @@ function renderShortestPath(shortestPermutation) {
         var memorialAId = destIdx2MemorialId[shortestPermutation[i]];
         var memorialBId = destIdx2MemorialId[shortestPermutation[i+1]];
         var number = i+2;
-        memorialSelected[memorialAId].marker.setIcon("../images/" + number.toString() + ".JPG")
+        memorialSelected[memorialAId].marker.setIcon("./images/" + number.toString() + ".JPG")
         var directionDivId = createDirectionDiv(shortestPermutation[i].toString())
         renderRoute(memorialSelected[memorialAId], memorialSelected[memorialBId], directionDivId);
     }
 
     var number = shortestPermutation.length + 1;
     var memorialId = destIdx2MemorialId[shortestPermutation[shortestPermutation.length-1]];
-    memorialSelected[memorialId].marker.setIcon("../images/" + number.toString() + ".JPG");   
+    memorialSelected[memorialId].marker.setIcon("./images/" + number.toString() + ".JPG");   
     var directionDivId = createDirectionDiv(shortestPermutation[shortestPermutation.length-1].toString());
     renderLastDestination(memorialSelected[memorialId], directionDivId);
 }
@@ -207,7 +207,7 @@ function renderRoute(start, end, directionDivId) {
                     <div class="step">
                         <div class="instructions">
                             ${step.maneuver ? 
-                            `<img class="${step.maneuver}" src="../images/${step.maneuver}.png">` : ''}
+                            `<img class="${step.maneuver}" src="./images/${step.maneuver}.png">` : ''}
                             <span>${step.instructions}</span>
                         </div>
                         <div class="distance">
