@@ -41,6 +41,14 @@
     transform: scaleX(-1);
 }
 
+.turn-slight-right {
+    transform: scaleX(-1);
+}
+
+.turn-sharp-right {
+    transform: scaleX(-1);
+}
+
 .step {
     padding-left: 10px;
 }
