@@ -1,0 +1,579 @@
+{
+    "geocoded_waypoints": [
+        {
+            "geocoder_status": "OK",
+            "place_id": "ChIJ13j8pdqd44kRyC2FhNM4eWE",
+            "types": [
+                "street_address"
+            ]
+        },
+        {
+            "geocoder_status": "OK",
+            "place_id": "ChIJI09jMtCd44kRsiYSAUr97a8",
+            "types": [
+                "premise"
+            ]
+        }
+    ],
+    "routes": [
+        {
+            "bounds": {
+                "south": 42.44818,
+                "west": -71.23079,
+                "north": 42.44906,
+                "east": -71.22758
+            },
+            "copyrights": "Map data ©2022 Google",
+            "legs": [
+                {
+                    "distance": {
+                        "text": "0.2 mi",
+                        "value": 330
+                    },
+                    "duration": {
+                        "text": "1 min",
+                        "value": 82
+                    },
+                    "end_address": "1900 Massachusetts Ave, Lexington, MA 02421, USA",
+                    "end_location": {
+                        "lat": 42.4490646,
+                        "lng": -71.23079290000001
+                    },
+                    "start_address": "11 Depot Square, Lexington, MA 02420, USA",
+                    "start_location": {
+                        "lat": 42.44845429999999,
+                        "lng": -71.227577
+                    },
+                    "steps": [
+                        {
+                            "distance": {
+                                "text": "52 ft",
+                                "value": 16
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 4
+                            },
+                            "end_location": {
+                                "lat": 42.4483335,
+                                "lng": -71.22768479999999
+                            },
+                            "polyline": {
+                                "points": "yuabGjsvqLVR"
+                            },
+                            "start_location": {
+                                "lat": 42.44845429999999,
+                                "lng": -71.227577
+                            },
+                            "travel_mode": "DRIVING",
+                            "encoded_lat_lngs": "yuabGjsvqLVR",
+                            "path": [
+                                {
+                                    "lat": 42.44845,
+                                    "lng": -71.22758
+                                },
+                                {
+                                    "lat": 42.448330000000006,
+                                    "lng": -71.22768
+                                }
+                            ],
+                            "lat_lngs": [
+                                {
+                                    "lat": 42.44845,
+                                    "lng": -71.22758
+                                },
+                                {
+                                    "lat": 42.448330000000006,
+                                    "lng": -71.22768
+                                }
+                            ],
+                            "instructions": "Head <b>southwest</b> on <b>Edison Way</b> toward <b>Depot Square</b>",
+                            "maneuver": "",
+                            "start_point": {
+                                "lat": 42.44845429999999,
+                                "lng": -71.227577
+                            },
+                            "end_point": {
+                                "lat": 42.4483335,
+                                "lng": -71.22768479999999
+                            }
+                        },
+                        {
+                            "distance": {
+                                "text": "167 ft",
+                                "value": 51
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 23
+                            },
+                            "end_location": {
+                                "lat": 42.44858,
+                                "lng": -71.22820349999999
+                            },
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "auabG~svqL]~@Sf@"
+                            },
+                            "start_location": {
+                                "lat": 42.4483335,
+                                "lng": -71.22768479999999
+                            },
+                            "travel_mode": "DRIVING",
+                            "encoded_lat_lngs": "auabG~svqL]~@Sf@",
+                            "path": [
+                                {
+                                    "lat": 42.448330000000006,
+                                    "lng": -71.22768
+                                },
+                                {
+                                    "lat": 42.44848,
+                                    "lng": -71.22800000000001
+                                },
+                                {
+                                    "lat": 42.44858000000001,
+                                    "lng": -71.2282
+                                }
+                            ],
+                            "lat_lngs": [
+                                {
+                                    "lat": 42.448330000000006,
+                                    "lng": -71.22768
+                                },
+                                {
+                                    "lat": 42.44848,
+                                    "lng": -71.22800000000001
+                                },
+                                {
+                                    "lat": 42.44858000000001,
+                                    "lng": -71.2282
+                                }
+                            ],
+                            "instructions": "Turn <b>right</b> onto <b>Depot Square</b>",
+                            "start_point": {
+                                "lat": 42.4483335,
+                                "lng": -71.22768479999999
+                            },
+                            "end_point": {
+                                "lat": 42.44858,
+                                "lng": -71.22820349999999
+                            }
+                        },
+                        {
+                            "distance": {
+                                "text": "203 ft",
+                                "value": 62
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 25
+                            },
+                            "end_location": {
+                                "lat": 42.4481754,
+                                "lng": -71.2287264
+                            },
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "svabGfwvqLHLHLHLJNTZNR"
+                            },
+                            "start_location": {
+                                "lat": 42.44858,
+                                "lng": -71.22820349999999
+                            },
+                            "travel_mode": "DRIVING",
+                            "encoded_lat_lngs": "svabGfwvqLHLHLHLJNTZNR",
+                            "path": [
+                                {
+                                    "lat": 42.44858000000001,
+                                    "lng": -71.2282
+                                },
+                                {
+                                    "lat": 42.448530000000005,
+                                    "lng": -71.22827000000001
+                                },
+                                {
+                                    "lat": 42.44848,
+                                    "lng": -71.22834
+                                },
+                                {
+                                    "lat": 42.44843,
+                                    "lng": -71.22841000000001
+                                },
+                                {
+                                    "lat": 42.448370000000004,
+                                    "lng": -71.22849000000001
+                                },
+                                {
+                                    "lat": 42.448260000000005,
+                                    "lng": -71.22863000000001
+                                },
+                                {
+                                    "lat": 42.44818,
+                                    "lng": -71.22873
+                                }
+                            ],
+                            "lat_lngs": [
+                                {
+                                    "lat": 42.44858000000001,
+                                    "lng": -71.2282
+                                },
+                                {
+                                    "lat": 42.448530000000005,
+                                    "lng": -71.22827000000001
+                                },
+                                {
+                                    "lat": 42.44848,
+                                    "lng": -71.22834
+                                },
+                                {
+                                    "lat": 42.44843,
+                                    "lng": -71.22841000000001
+                                },
+                                {
+                                    "lat": 42.448370000000004,
+                                    "lng": -71.22849000000001
+                                },
+                                {
+                                    "lat": 42.448260000000005,
+                                    "lng": -71.22863000000001
+                                },
+                                {
+                                    "lat": 42.44818,
+                                    "lng": -71.22873
+                                }
+                            ],
+                            "instructions": "Turn <b>left</b> to stay on <b>Depot Square</b>",
+                            "start_point": {
+                                "lat": 42.44858,
+                                "lng": -71.22820349999999
+                            },
+                            "end_point": {
+                                "lat": 42.4481754,
+                                "lng": -71.2287264
+                            }
+                        },
+                        {
+                            "distance": {
+                                "text": "387 ft",
+                                "value": 118
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 18
+                            },
+                            "end_location": {
+                                "lat": 42.4488223,
+                                "lng": -71.2298603
+                            },
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "ctabGpzvqLQ`@EJABGNWl@]r@A@Q`@SX"
+                            },
+                            "start_location": {
+                                "lat": 42.4481754,
+                                "lng": -71.2287264
+                            },
+                            "travel_mode": "DRIVING",
+                            "encoded_lat_lngs": "ctabGpzvqLQ`@EJABGNWl@]r@A@Q`@SX",
+                            "path": [
+                                {
+                                    "lat": 42.44818,
+                                    "lng": -71.22873
+                                },
+                                {
+                                    "lat": 42.44827,
+                                    "lng": -71.22890000000001
+                                },
+                                {
+                                    "lat": 42.4483,
+                                    "lng": -71.22896
+                                },
+                                {
+                                    "lat": 42.448310000000006,
+                                    "lng": -71.22898
+                                },
+                                {
+                                    "lat": 42.448350000000005,
+                                    "lng": -71.22906
+                                },
+                                {
+                                    "lat": 42.44847,
+                                    "lng": -71.22929
+                                },
+                                {
+                                    "lat": 42.448620000000005,
+                                    "lng": -71.22955
+                                },
+                                {
+                                    "lat": 42.44863,
+                                    "lng": -71.22956
+                                },
+                                {
+                                    "lat": 42.44872,
+                                    "lng": -71.22973
+                                },
+                                {
+                                    "lat": 42.448820000000005,
+                                    "lng": -71.22986
+                                }
+                            ],
+                            "lat_lngs": [
+                                {
+                                    "lat": 42.44818,
+                                    "lng": -71.22873
+                                },
+                                {
+                                    "lat": 42.44827,
+                                    "lng": -71.22890000000001
+                                },
+                                {
+                                    "lat": 42.4483,
+                                    "lng": -71.22896
+                                },
+                                {
+                                    "lat": 42.448310000000006,
+                                    "lng": -71.22898
+                                },
+                                {
+                                    "lat": 42.448350000000005,
+                                    "lng": -71.22906
+                                },
+                                {
+                                    "lat": 42.44847,
+                                    "lng": -71.22929
+                                },
+                                {
+                                    "lat": 42.448620000000005,
+                                    "lng": -71.22955
+                                },
+                                {
+                                    "lat": 42.44863,
+                                    "lng": -71.22956
+                                },
+                                {
+                                    "lat": 42.44872,
+                                    "lng": -71.22973
+                                },
+                                {
+                                    "lat": 42.448820000000005,
+                                    "lng": -71.22986
+                                }
+                            ],
+                            "instructions": "Turn <b>right</b> onto <b>Massachusetts Ave</b>",
+                            "start_point": {
+                                "lat": 42.4481754,
+                                "lng": -71.2287264
+                            },
+                            "end_point": {
+                                "lat": 42.4488223,
+                                "lng": -71.2298603
+                            }
+                        },
+                        {
+                            "distance": {
+                                "text": "272 ft",
+                                "value": 83
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 12
+                            },
+                            "end_location": {
+                                "lat": 42.4490646,
+                                "lng": -71.23079290000001
+                            },
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "cxabGrawqL?L?L?H?HAFEXGR]lAAD"
+                            },
+                            "start_location": {
+                                "lat": 42.4488223,
+                                "lng": -71.2298603
+                            },
+                            "travel_mode": "DRIVING",
+                            "encoded_lat_lngs": "cxabGrawqL?L?L?H?HAFEXGR]lAAD",
+                            "path": [
+                                {
+                                    "lat": 42.448820000000005,
+                                    "lng": -71.22986
+                                },
+                                {
+                                    "lat": 42.448820000000005,
+                                    "lng": -71.22993000000001
+                                },
+                                {
+                                    "lat": 42.448820000000005,
+                                    "lng": -71.23
+                                },
+                                {
+                                    "lat": 42.448820000000005,
+                                    "lng": -71.23005
+                                },
+                                {
+                                    "lat": 42.448820000000005,
+                                    "lng": -71.23010000000001
+                                },
+                                {
+                                    "lat": 42.44883,
+                                    "lng": -71.23014
+                                },
+                                {
+                                    "lat": 42.44886,
+                                    "lng": -71.23027
+                                },
+                                {
+                                    "lat": 42.4489,
+                                    "lng": -71.23037000000001
+                                },
+                                {
+                                    "lat": 42.44905000000001,
+                                    "lng": -71.23076
+                                },
+                                {
+                                    "lat": 42.44906,
+                                    "lng": -71.23079
+                                }
+                            ],
+                            "lat_lngs": [
+                                {
+                                    "lat": 42.448820000000005,
+                                    "lng": -71.22986
+                                },
+                                {
+                                    "lat": 42.448820000000005,
+                                    "lng": -71.22993000000001
+                                },
+                                {
+                                    "lat": 42.448820000000005,
+                                    "lng": -71.23
+                                },
+                                {
+                                    "lat": 42.448820000000005,
+                                    "lng": -71.23005
+                                },
+                                {
+                                    "lat": 42.448820000000005,
+                                    "lng": -71.23010000000001
+                                },
+                                {
+                                    "lat": 42.44883,
+                                    "lng": -71.23014
+                                },
+                                {
+                                    "lat": 42.44886,
+                                    "lng": -71.23027
+                                },
+                                {
+                                    "lat": 42.4489,
+                                    "lng": -71.23037000000001
+                                },
+                                {
+                                    "lat": 42.44905000000001,
+                                    "lng": -71.23076
+                                },
+                                {
+                                    "lat": 42.44906,
+                                    "lng": -71.23079
+                                }
+                            ],
+                            "instructions": "Turn <b>left</b> to stay on <b>Massachusetts Ave</b><div style=\"font-size:0.9em\">Destination will be on the right</div>",
+                            "start_point": {
+                                "lat": 42.4488223,
+                                "lng": -71.2298603
+                            },
+                            "end_point": {
+                                "lat": 42.4490646,
+                                "lng": -71.23079290000001
+                            }
+                        }
+                    ],
+                    "traffic_speed_entry": [],
+                    "via_waypoint": [],
+                    "via_waypoints": []
+                }
+            ],
+            "overview_polyline": "yuabGjsvqLVR]~@Sf@HLRZ`@j@NRQ`@GN_ArBe@z@?ZGt@g@fB",
+            "summary": "Depot Square and Massachusetts Ave",
+            "warnings": [],
+            "waypoint_order": [],
+            "overview_path": [
+                {
+                    "lat": 42.44845,
+                    "lng": -71.22758
+                },
+                {
+                    "lat": 42.448330000000006,
+                    "lng": -71.22768
+                },
+                {
+                    "lat": 42.44848,
+                    "lng": -71.22800000000001
+                },
+                {
+                    "lat": 42.44858000000001,
+                    "lng": -71.2282
+                },
+                {
+                    "lat": 42.448530000000005,
+                    "lng": -71.22827000000001
+                },
+                {
+                    "lat": 42.44843,
+                    "lng": -71.22841000000001
+                },
+                {
+                    "lat": 42.448260000000005,
+                    "lng": -71.22863000000001
+                },
+                {
+                    "lat": 42.44818,
+                    "lng": -71.22873
+                },
+                {
+                    "lat": 42.44827,
+                    "lng": -71.22890000000001
+                },
+                {
+                    "lat": 42.448310000000006,
+                    "lng": -71.22898
+                },
+                {
+                    "lat": 42.44863,
+                    "lng": -71.22956
+                },
+                {
+                    "lat": 42.448820000000005,
+                    "lng": -71.22986
+                },
+                {
+                    "lat": 42.448820000000005,
+                    "lng": -71.23
+                },
+                {
+                    "lat": 42.44886,
+                    "lng": -71.23027
+                },
+                {
+                    "lat": 42.44906,
+                    "lng": -71.23079
+                }
+            ]
+        }
+    ],
+    "status": "OK",
+    "request": {
+        "origin": {
+            "location": {
+                "lat": 42.4484281850001,
+                "lng": -71.227523417
+            }
+        },
+        "destination": {
+            "location": {
+                "lat": 42.449142024,
+                "lng": -71.230737732
+            }
+        },
+        "travelMode": "DRIVING"
+    }
+}
