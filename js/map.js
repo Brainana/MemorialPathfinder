@@ -7,6 +7,8 @@ function initMap() {
     // The map, centered at Uluru
     window.map = new google.maps.Map(document.getElementById("map"), {
       zoom: 15,
+      minZoom: 11,
+      maxZoom: 15,
       center: lexingtonVisitorCenter,
       draggableCursor: 'pointer'
     });
