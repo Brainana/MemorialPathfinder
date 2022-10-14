@@ -60,7 +60,6 @@ function onLocateMe() {
         var startingPoint = document.querySelector("#startingPoint");
 
         startingPoint.classList = "form-control";
-        startingPoint.value = "Current Location";
         startingPointLocation = {
             lat: crd.latitude,
             lng: crd.longitude
