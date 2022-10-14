@@ -33,6 +33,8 @@ function onStartingPointChange() {
             position: startingPointLocation,
             map: window.map,
         });
+
+        adjustMapBound();
     });
 }
 
@@ -69,6 +71,8 @@ function onLocateMe() {
             position: startingPointLocation,
             map: window.map,
         });
+
+        adjustMapBound();
 
         let geocoder = new google.maps.Geocoder();
         geocoder.geocode({ location: startingPointLocation })
