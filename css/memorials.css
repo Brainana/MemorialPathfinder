@@ -4,3 +4,7 @@
     height: calc(100% - 230px);
     max-width: 345px;
 }
+
+#exceed-allowed-memorials {
+    display: none;
+}
