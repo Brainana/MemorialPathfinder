@@ -38,7 +38,25 @@ fetch("../data/memorials.json")
 var memorialSelected = {};
 var markers = {};
 
-function handleMemorialClick(memorialCheckBox) {
+function closeExceedAllowedMemorialsAlert() {
+    let alert =  document.querySelector("#exceed-allowed-memorials");
+    alert.style.display = "none";
+}
+
+function handleMemorialClick(event) {
+    let memorialCheckBox = event.currentTarget;
+
+    // Check if the user picked more than 10 memorials
+    if (memorialSelected[memorialCheckBox.id] === undefined && Object.keys(memorialSelected).length === 3) {
+        event.preventDefault();
+        let alert =  document.querySelector("#exceed-allowed-memorials");
+        var checkBoxRectangle = memorialCheckBox.getBoundingClientRect();
+        alert.style.top = Math.ceil(checkBoxRectangle.top - 75).toString() + "px";
+        alert.style.left = Math.ceil( checkBoxRectangle.left - 20).toString() + "px";
+        alert.style.display = "block";
+        return false;
+    }
+    
     console.log(memorialCheckBox);
 
     // let noLocationAlert =  document.querySelector("#no-location-alert");
@@ -85,7 +103,7 @@ function createMemorialsByType(memorialsByType) {
             checkboxes += `
                 <div class="form-check">
                     <input class="form-check-input memorial-check-box" type="checkbox" value="${memorial.Name_of_Memorial}" id="${memorial.OBJECTID_1}" lng="${memorial.x}" 
-                        lat="${memorial.y}" onclick='handleMemorialClick(this);'>
+                        lat="${memorial.y}" onclick='handleMemorialClick(event);'>
                     <label class="form-check-label" for="flexCheckDefault">
                         ${memorial.Name_of_Memorial}
                     </label>
