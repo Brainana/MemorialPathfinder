@@ -48,6 +48,14 @@
                 </div>
                 <p id="pick-memorials-label" class="fw-bolder">Pick Monuments and Memorials to visit:</p>
                 <div class="accordion" id="memorial-types"></div>
+                <div id="exceed-allowed-memorials" class="position-absolute">
+                  <div class="alert alert-warning">
+                    <button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="true" onclick="closeExceedAllowedMemorialsAlert()">
+                        ×
+                    </button> 
+                    Maximum 10 memorials are allowed
+                </div>
+                </div>
               </div>
               <div id="directions-panel" class="h-100" style="display:none">
                 <button class="back-to-location-picker btn btn-light" onclick="goBackToLocationPicker()">
@@ -58,9 +66,9 @@
                   <img src="./images/start_navigation.png">
                   <span class="fw-bolder text-dark">Start navigation</span>
                 </a>
-                <!-- <button class="btn btn-light float-start" onclick="switchToMapView(true)">
+                <button class="btn btn-light float-start" onclick="switchToMapView(true)">
                   <img class="google-map-button" src="./images/google_map.png"/>
-                </button> -->
+                </button>
                 <div id="directions" class="w-100"></div>
               </div>
             </div>
