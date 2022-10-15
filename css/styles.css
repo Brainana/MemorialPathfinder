@@ -29,14 +29,10 @@ html,body{
     display: none;
 }
 
-.locate-me-icon::before {
-    background-image: url('../images/locate_me.png');
-    background-size: 20px 20px;
-    display: inline-block;
+.locate-me-icon {
     width: 20px; 
     height: 20px;
-    content:"";
-    margin-top: 2px;
+    padding-bottom: 2px;
 }
 
 @media only screen and (max-width: 770px) {
