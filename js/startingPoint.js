@@ -1,6 +1,11 @@
 document.querySelector("#startingPoint").addEventListener('change', onStartingPointChange);
 
 function onStartingPointChange() {
+    // Need a delay for the autocomplete to fill in the address.
+    setTimeout(onStartingPointChangeHelper, 100);
+}
+
+function onStartingPointChangeHelper() {
     shortestRouteGenerated = false;
     clearRenderedRoutes();
     updateTravelModeButton("");
