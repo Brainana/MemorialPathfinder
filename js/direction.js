@@ -72,7 +72,7 @@ function getShortestPath(travelMode) {
         // unitSystem: UnitSystem,
         // avoidHighways: Boolean,
         // avoidTolls: Boolean,
-    }, getDistanceMatrixCallback);
+    }, getDistanceMatrixCallback.bind(this, travelMode));
 
     // fetch("../data/distanceMatrixSampleResponse.json")
     // .then(response => response.json())
@@ -84,7 +84,7 @@ function getShortestPath(travelMode) {
 var shortestDistance;
 var shortestPermutation;
 
-function getDistanceMatrixCallback(response, travelMode) {
+function getDistanceMatrixCallback(travelMode, response, status) {
     console.log(response);
 
     shortestDistance = Number.MAX_VALUE;
