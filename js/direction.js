@@ -105,7 +105,7 @@ function getDistanceMatrixCallback(travelMode, response, status) {
         console.log(memorialSelected[memorialId].name);
     }
 
-    renderShortestPath(shortestPermutation);
+    renderShortestPath(shortestPermutation, travelMode);
 
     generateGoogleMapUrl(response, shortestPermutation, travelMode);
 
@@ -144,12 +144,12 @@ function createDirectionDiv(id) {
     return direction.id;
 }
 
-function renderShortestPath(shortestPermutation) {
+function renderShortestPath(shortestPermutation, travelMode) {
     var memorialId = destIdx2MemorialId[shortestPermutation[0]];
     startingPointMarker.setIcon("./images/1.JPG");
     var directionDivId = createDirectionDiv("start");
     let startingPoint =  document.querySelector("#startingPoint");
-    renderRoute({latLng: startingPointLocation, name: startingPoint.value}, memorialSelected[memorialId], directionDivId), 1;
+    renderRoute(travelMode, {latLng: startingPointLocation, name: startingPoint.value}, memorialSelected[memorialId], directionDivId), 1;
 
     for (var i=0; i<shortestPermutation.length-1; i++) {
         var memorialAId = destIdx2MemorialId[shortestPermutation[i]];
@@ -157,7 +157,7 @@ function renderShortestPath(shortestPermutation) {
         var number = i+2;
         memorialSelected[memorialAId].marker.setIcon("./images/" + number.toString() + ".JPG")
         var directionDivId = createDirectionDiv(shortestPermutation[i].toString())
-        renderRoute(memorialSelected[memorialAId], memorialSelected[memorialBId], directionDivId);
+        renderRoute(travelMode, memorialSelected[memorialAId], memorialSelected[memorialBId], directionDivId);
     }
 
     var number = shortestPermutation.length + 1;
@@ -169,21 +169,49 @@ function renderShortestPath(shortestPermutation) {
 
 var directionsRenderers = [];
 
-function renderRoute(start, end, directionDivId) {
+function renderRoute(travelMode, start, end, directionDivId) {
     toggleLocationPickerAndDirections(false);
 
     var request = {
         origin: start.latLng,
         destination: end.latLng,
-        travelMode: 'DRIVING'
+        travelMode: travelMode.toUpperCase()
     };
     directionsService.route(request, function(result, status) {
         if (status == 'OK') {
             console.log(result);
+
+            var polylineOptions;
+            if (travelMode === "walking") {
+                var lineSymbol = {
+                    path: google.maps.SymbolPath.CIRCLE,
+                    fillOpacity: 1,
+                    scale: 3
+                };
+
+                polylineOptions = new google.maps.Polyline({
+                    strokeColor: '#347aeb',
+                    strokeOpacity: 0,
+                    icons: [{
+                        icon: lineSymbol,
+                        offset: '0',
+                        repeat: '10px'
+                    }]
+                })
+            } else {
+                polylineOptions = new google.maps.Polyline({
+                    strokeColor: '#347aeb',
+                    strokeWeight: 5,
+                    strokeOpacity: 1
+                });
+            }
+
             var rendererOptions = {
                 preserveViewport: true,         
-                suppressMarkers:true
+                suppressMarkers:true,
+                polylineOptions: polylineOptions
             };
+            
             var directionsRenderer = new google.maps.DirectionsRenderer(rendererOptions);
             directionsRenderer.setMap(map);
             directionsRenderer.setDirections(result);
