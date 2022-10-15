@@ -34,6 +34,25 @@ function initMap() {
     });
 
     directionsService = new google.maps.DirectionsService();
+
+    let startingPoint = document.querySelector("#startingPoint")
+
+    // Create a bounding box with sides ~10km away from the center point
+    const defaultBounds = {
+        north: lexingtonVisitorCenter.lat + 0.1,
+        south: lexingtonVisitorCenter.lat - 0.1,
+        east: lexingtonVisitorCenter.lng + 0.1,
+        west: lexingtonVisitorCenter.lng - 0.1,
+    };
+    const options = {
+        bounds: defaultBounds,
+        componentRestrictions: { country: "us" },
+        fields: ["address_components", "geometry", "icon", "name"],
+        strictBounds: false
+        // types: ["establishment"]
+    };
+    const autocomplete = new google.maps.places.Autocomplete(startingPoint, options);
+
 }
   
 window.initMap = initMap;
