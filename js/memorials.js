@@ -47,7 +47,7 @@ function handleMemorialClick(event) {
     let memorialCheckBox = event.currentTarget;
 
     // Check if the user picked more than 10 memorials
-    if (memorialSelected[memorialCheckBox.id] === undefined && Object.keys(memorialSelected).length === 3) {
+    if (memorialSelected[memorialCheckBox.id] === undefined && Object.keys(memorialSelected).length === 10) {
         event.preventDefault();
         let alert =  document.querySelector("#exceed-allowed-memorials");
         var checkBoxRectangle = memorialCheckBox.getBoundingClientRect();
