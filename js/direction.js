@@ -72,7 +72,7 @@ function getShortestPath(travelMode) {
         // unitSystem: UnitSystem,
         // avoidHighways: Boolean,
         // avoidTolls: Boolean,
-    }, getDistanceMatrixCallback.bind(this, travelMode));
+    }, getDistanceMatrixCallback.bind(this, travelMode, destinations));
 
     // fetch("../data/distanceMatrixSampleResponse.json")
     // .then(response => response.json())
@@ -84,14 +84,14 @@ function getShortestPath(travelMode) {
 var shortestDistance;
 var shortestPermutation;
 
-function getDistanceMatrixCallback(travelMode, response, status) {
+function getDistanceMatrixCallback(travelMode, destinations, response, status) {
     console.log(response);
 
     shortestDistance = Number.MAX_VALUE;
     shortestPermutation = [];
 
     var array = [];
-    var numOfDestinations = response.destinationAddresses.length;
+    var numOfDestinations = destinations.length;
     for (var i=0; i<numOfDestinations; i++) {
         array.push(i);
     }
@@ -107,23 +107,23 @@ function getDistanceMatrixCallback(travelMode, response, status) {
 
     renderShortestPath(shortestPermutation, travelMode);
 
-    generateGoogleMapUrl(response, shortestPermutation, travelMode);
+    generateGoogleMapUrl(response, shortestPermutation, destinations, travelMode);
 
     shortestRouteGenerated = true;
 }
 
 var shortestPathUrl; 
 
-function generateGoogleMapUrl(distanceMatrixResponse, shortestPermutation, travelMode) {
+function generateGoogleMapUrl(distanceMatrixResponse, shortestPermutation, destinations, travelMode) {
     shortestPathUrl = "https://www.google.com/maps/dir/?api=1";
     let startingPoint =  document.querySelector("#startingPoint");
     shortestPathUrl += "&origin=" + startingPoint.value;
-    shortestPathUrl += "&destination=" + distanceMatrixResponse.destinationAddresses[shortestPermutation[shortestPermutation.length-1]];
+    shortestPathUrl += "&destination=" + destinations[shortestPermutation[shortestPermutation.length-1]].toString();
     if (shortestPermutation.length > 1) {
         shortestPathUrl += "&waypoints="
         for (let i=0; i<shortestPermutation.length-1; i++) {
             let destinationIdx = shortestPermutation[i];
-            shortestPathUrl += distanceMatrixResponse.destinationAddresses[destinationIdx] + "|"
+            shortestPathUrl += destinations[destinationIdx].toString() + "|"
         };
         shortestPathUrl.slice(0, -1);
     }
