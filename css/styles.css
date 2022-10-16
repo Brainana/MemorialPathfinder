@@ -20,10 +20,6 @@ html,body{
     min-width: 345px;
 }
 
-#right-panel {
-    min-width: 650px;
-}
-
 .google-map-button {
     width: 50px;
     display: none;
