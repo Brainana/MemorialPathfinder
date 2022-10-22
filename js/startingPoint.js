@@ -39,7 +39,7 @@ function onStartingPointChangeHelper() {
             map: window.map,
         });
 
-        adjustMapBound();
+        adjustMapBound(true, true);
     });
 }
 
@@ -77,7 +77,7 @@ function onLocateMe() {
             map: window.map,
         });
 
-        adjustMapBound();
+        adjustMapBound(true, true);
 
         let geocoder = new google.maps.Geocoder();
         geocoder.geocode({ location: startingPointLocation })

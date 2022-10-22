@@ -1,13 +1,16 @@
 var directionsService;
+var lexingtonVisitorCenter;
 
 // Initialize and add the map
 function initMap() {  
+    // const lexingtonVisitorCenter = { lat: 42.449115, lng: -71.228909 };
+    lexingtonVisitorCenter = new google.maps.LatLng(42.449115, -71.228909);
+
     // The location of Lexington Visitor Center
-    const lexingtonVisitorCenter = { lat: 42.449115, lng: -71.228909 };
     // The map, centered at Uluru
     window.map = new google.maps.Map(document.getElementById("map"), {
       zoom: 15,
-      minZoom: 11,
+      minZoom: 5,
       maxZoom: 15,
       center: lexingtonVisitorCenter,
       draggableCursor: 'pointer'
@@ -22,6 +25,12 @@ function initMap() {
             .then(response => response.json())
             .then(function(json) {
                 console.log(json);
+                
+                if (startingPointMarker) {
+                    startingPointMarker.setMap(null);
+                    startingPointMarker = undefined;
+                }
+
                 let startingPoint =  document.querySelector("#startingPoint");
                 startingPoint.value = json.results[0].formatted_address;
                 startingPointLocation = json.results[0].geometry.location;

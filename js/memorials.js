@@ -1,5 +1,6 @@
 
 var memorialTypeCode2Name = {};
+var memorials;
 
 fetch("./data/memorials.json")
   .then(response => response.json())
@@ -15,7 +16,7 @@ fetch("./data/memorials.json")
         }
     })
 
-    let memorials = json.features;
+    memorials = json.features;
     let memorialsByType = {};
     
     memorials.forEach(function(memorial) {
@@ -75,23 +76,108 @@ function handleMemorialClick(event) {
         var latLng = new google.maps.LatLng(parseFloat(memorialCheckBox.getAttribute("lat")), parseFloat(memorialCheckBox.getAttribute("lng")));
         // const memorialGIS = { lat: parseFloat(memorialCheckBox.getAttribute("lat")), lng: parseFloat(memorialCheckBox.getAttribute("lng")) };
 
+        var type = memorialCheckBox.getAttribute("memorialtype");
+        var pinIcon = new google.maps.MarkerImage(
+            "./images/" +  type + ".png",
+            null, /* size is determined at runtime */
+            null, /* origin is 0,0 */
+            null, /* anchor is bottom center of the scaled image */
+            new google.maps.Size(36, 36)
+        );  
         // The marker, positioned at memorial
         const marker = new google.maps.Marker({
             position: latLng,
-            map: window.map,
+            map: window.map
+            // icon: "./images/" + memorialCheckBox.getAttribute("memorialtype") + ".png"
         });
+        marker.setIcon(pinIcon);
+
+        var id = memorialCheckBox.getAttribute("id");
+        var memorial = memorials.filter(memorial => memorial.attributes.OBJECTID_1 === parseInt(id))[0];
+        var plaqueText = memorial.attributes.Plaque_text;
+        var description = memorial.attributes.Monu_descr;
+        var attachmentUrl = getAttachmentUrl(memorial);
+        var history = memorial.attributes.Monument_History;
+        var contentString = "";
+        if (attachmentUrl) {
+            contentString += '<div><img class="memorial-photo" src="' + attachmentUrl + '"/></div>';
+        }
+        if (description) {
+            // contentString += '<div class="fs-5 fw-semibold mt-2 mb-2">Description:</div><div class="fs-6">' + plaqueText + "</div>"; 
+            contentString += '<div class="fs-6">' + description + "</div>"; 
+        }
+        if (plaqueText) {
+            // contentString += '<div class="fs-5 fw-semibold mt-2 mb-2">Plaque Text:</div><div class="fs-6">' + plaqueText + "</div>"; 
+            contentString += '<div class="fs-6">' + plaqueText + "</div>"; 
+        }
+        if (history) {
+            // contentString += '<div class="fs-5 fw-semibold mt-2 mb-2">History:</div><div class="fs-6">' + history + "</div>"; 
+            contentString += '<div class="fs-6">' + history + "</div>"; 
+        }
+
+        var infowindow;
+        if (contentString) {
+            infowindow = new google.maps.InfoWindow({
+                content: contentString,
+                ariaLabel: memorial.Name_of_Memorial,
+                maxWidth: 600
+            });
+
+            marker.addListener("click", () => {
+                infowindow.open({
+                anchor: marker,
+                map,
+                });
+            });
+        }
 
         memorialSelected[memorialCheckBox.id] = {
             name: memorialCheckBox.defaultValue,
             latLng: latLng,
-            marker: marker
+            marker: marker,
+            type: type
         }
+        
+        if (infowindow) {
+            memorialSelected[memorialCheckBox.id].infowindow = infowindow;
+        }
+
     } else {
+        if (memorialSelected[memorialCheckBox.id].infowindow) {
+            delete memorialSelected[memorialCheckBox.id].infowindow;
+        }
         memorialSelected[memorialCheckBox.id].marker.setMap(null);
+        delete memorialSelected[memorialCheckBox.id].marker;
         delete memorialSelected[memorialCheckBox.id];
     }
 
-    adjustMapBound();
+    adjustMapBound(false, true);
+}
+
+// async function getAttachmentUrl(memorialId) {
+//     var baseAttachmentUrl = "https://services.arcgis.com/bP0owepHkr9WxF4V/arcgis/rest/services/Monument_plaques_Verified/FeatureServer/0/" + memorialId + "/attachments";
+//     var getAttachmentInfoUrl = baseAttachmentUrl + "?f=json";
+//     var resp = await fetch(getAttachmentInfoUrl);
+//     var json = resp.json();
+//     var attachmentInfos = json.attachmentInfos;
+//     var attachmentId;
+//     if (attachmentInfos.length > 0) {
+//         attachmentId = attachmentInfos[0].id;
+//     }
+//     if (attachmentId) {
+//         return baseAttachmentUrl + "/" + attachmentId + "?width=200";
+//     } 
+//     return null;
+// }
+
+function getAttachmentUrl(memorial) {
+    var memorialId = memorial.attributes.OBJECTID_1;
+    var attachmentId = memorial.attributes.AttachmentId;
+    if (attachmentId) {
+        var baseAttachmentUrl = "https://services.arcgis.com/bP0owepHkr9WxF4V/arcgis/rest/services/Monument_plaques_Verified/FeatureServer/0/" + memorialId + "/attachments";
+        return baseAttachmentUrl + "/" + attachmentId + "?width=400";
+    } 
+    return null;
 }
 
 function createMemorialsByType(memorialsByType) {
@@ -103,7 +189,7 @@ function createMemorialsByType(memorialsByType) {
             checkboxes += `
                 <div class="form-check">
                     <input class="form-check-input memorial-check-box" type="checkbox" value="${memorial.Name_of_Memorial}" id="${memorial.OBJECTID_1}" lng="${memorial.x}" 
-                        lat="${memorial.y}" onclick='handleMemorialClick(event);'>
+                        lat="${memorial.y}" memorialtype="${memorial.TYPE_}" onclick='handleMemorialClick(event);'>
                     <label class="form-check-label" for="flexCheckDefault">
                         ${memorial.Name_of_Memorial}
                     </label>

@@ -544,6 +544,7 @@
           "DPW_MATERIAL": "",
           "Memorial_address": "Edison Way",
           "Name_of_Memorial": "Jack Eddison Memorial Bikeway",
+          "AttachmentId": 1,
           "Public_private": "Public",
           "Event": null,
           "Notes_1": null,
@@ -583,6 +584,7 @@
           "DPW_MATERIAL": " ",
           "Memorial_address": "1 Bedford St",
           "Name_of_Memorial": "In Honor of Prince Estabrook",
+          "AttachmentId": 2,
           "Public_private": "Public",
           "Event": null,
           "Notes_1": null,
@@ -635,6 +637,7 @@
       {
         "attributes": {
           "OBJECTID_1": 4,
+          "AttachmentId": 3,
           "OBJECTID": null,
           "Dimensions": "Five foot High",
           "Form": "George Washington - The Free Mason Statue",
@@ -674,6 +677,7 @@
       {
         "attributes": {
           "OBJECTID_1": 5,
+          "AttachmentId": 4,
           "OBJECTID": null,
           "Dimensions": "1' x 2'",
           "Form": "Ruth Winchester Morey 1905-1994",
@@ -713,6 +717,7 @@
       {
         "attributes": {
           "OBJECTID_1": 6,
+          "AttachmentId": 5,
           "OBJECTID": null,
           "Dimensions": "1' x 2'",
           "Form": "Susan Bennett",
@@ -752,6 +757,7 @@
       {
         "attributes": {
           "OBJECTID_1": 7,
+          "AttachmentId": 6,
           "OBJECTID": null,
           "Dimensions": "2' x 4'",
           "Form": "WWII Monument to Hancock Church Members that Serve",
@@ -791,6 +797,7 @@
       {
         "attributes": {
           "OBJECTID_1": 8,
+          "AttachmentId": 7,
           "OBJECTID": null,
           "Dimensions": null,
           "Form": "Kay Tiffany",
@@ -830,6 +837,7 @@
       {
         "attributes": {
           "OBJECTID_1": 9,
+          "AttachmentId": 8,
           "OBJECTID": null,
           "Dimensions": "1\" x 3\"",
           "Form": "John W Frey",
@@ -869,6 +877,7 @@
       {
         "attributes": {
           "OBJECTID_1": 10,
+          "AttachmentId": 9,
           "OBJECTID": null,
           "Dimensions": null,
           "Form": "James \"Jim\" Banks Gym",
@@ -908,6 +917,7 @@
       {
         "attributes": {
           "OBJECTID_1": 11,
+          "AttachmentId": 10,
           "OBJECTID": null,
           "Dimensions": null,
           "Form": "First House erected in Lexington",
@@ -947,6 +957,7 @@
       {
         "attributes": {
           "OBJECTID_1": 12,
+          "AttachmentId": 11,
           "OBJECTID": null,
           "Dimensions": "Bulding",
           "Form": "Cary Library",
@@ -986,6 +997,7 @@
       {
         "attributes": {
           "OBJECTID_1": 13,
+          "AttachmentId": 12,
           "OBJECTID": null,
           "Dimensions": "5' tall",
           "Form": "The Stone Cannon",
@@ -1025,6 +1037,7 @@
       {
         "attributes": {
           "OBJECTID_1": 14,
+          "AttachmentId": 13,
           "OBJECTID": null,
           "Dimensions": "Tree died and replaced by DPW with three Trees",
           "Form": "Israel 15th Anniversary and Lexington 250th",
@@ -1064,6 +1077,7 @@
       {
         "attributes": {
           "OBJECTID_1": 15,
+          "AttachmentId": 14,
           "OBJECTID": null,
           "Dimensions": null,
           "Form": "Benjamin Wellington Memorial",
@@ -1103,6 +1117,7 @@
       {
         "attributes": {
           "OBJECTID_1": 16,
+          "AttachmentId": 16,
           "OBJECTID": null,
           "Dimensions": "Plaque size 16 X 22",
           "Form": null,
@@ -1142,6 +1157,7 @@
       {
         "attributes": {
           "OBJECTID_1": 17,
+          "AttachmentId": 17,
           "OBJECTID": null,
           "Dimensions": null,
           "Form": "Lexington Police Memorial",
@@ -1181,6 +1197,7 @@
       {
         "attributes": {
           "OBJECTID_1": 18,
+          "AttachmentId": 18,
           "OBJECTID": 4,
           "Dimensions": null,
           "Form": null,
@@ -1220,6 +1237,7 @@
       {
         "attributes": {
           "OBJECTID_1": 19,
+          "AttachmentId": 20,
           "OBJECTID": 5,
           "Dimensions": null,
           "Form": null,
@@ -1245,7 +1263,7 @@
           "DPWDATE": 1642896000000,
           "DPW_MATERIAL": " ",
           "Memorial_address": " ",
-          "Name_of_Memorial": "The Old Burying Ground Cemetery",
+          "Name_of_Memorial": "Old Burying Ground Cemetery",
           "Public_private": "Public",
           "Event": " ",
           "Notes_1": "Cemetery",
@@ -1259,6 +1277,7 @@
       {
         "attributes": {
           "OBJECTID_1": 20,
+          "AttachmentId": 22,
           "OBJECTID": 6,
           "Dimensions": null,
           "Form": null,
@@ -1284,7 +1303,7 @@
           "DPWDATE": 1642982400000,
           "DPW_MATERIAL": " ",
           "Memorial_address": " Massachusetts Ave and Clark St",
-          "Name_of_Memorial": "Historic Building Old Belfry Tower",
+          "Name_of_Memorial": "Old Belfry Tower",
           "Public_private": "Public",
           "Event": "Revolution",
           "Notes_1": "Historic Building Old Belfry Tower",
@@ -1298,6 +1317,7 @@
       {
         "attributes": {
           "OBJECTID_1": 21,
+          "AttachmentId": 23,
           "OBJECTID": 7,
           "Dimensions": null,
           "Form": null,
@@ -1337,6 +1357,7 @@
       {
         "attributes": {
           "OBJECTID_1": 22,
+          "AttachmentId": 121,
           "OBJECTID": 8,
           "Dimensions": null,
           "Form": null,
@@ -1376,6 +1397,7 @@
       {
         "attributes": {
           "OBJECTID_1": 23,
+          "AttachmentId": 26,
           "OBJECTID": 9,
           "Dimensions": null,
           "Form": null,
@@ -1415,6 +1437,7 @@
       {
         "attributes": {
           "OBJECTID_1": 24,
+          "AttachmentId": 106,
           "OBJECTID": 10,
           "Dimensions": null,
           "Form": null,
@@ -1493,6 +1516,7 @@
       {
         "attributes": {
           "OBJECTID_1": 26,
+          "AttachmentId": 87,
           "OBJECTID": 12,
           "Dimensions": null,
           "Form": null,
@@ -1532,6 +1556,7 @@
       {
         "attributes": {
           "OBJECTID_1": 27,
+          "AttachmentId": 96,
           "OBJECTID": 13,
           "Dimensions": null,
           "Form": null,
@@ -1571,6 +1596,7 @@
       {
         "attributes": {
           "OBJECTID_1": 28,
+          "AttachmentId": 140,
           "OBJECTID": 14,
           "Dimensions": null,
           "Form": null,
@@ -1610,6 +1636,7 @@
       {
         "attributes": {
           "OBJECTID_1": 29,
+          "AttachmentId": 79,
           "OBJECTID": 15,
           "Dimensions": null,
           "Form": null,
@@ -1649,6 +1676,7 @@
       {
         "attributes": {
           "OBJECTID_1": 30,
+          "AttachmentId": 110,
           "OBJECTID": 16,
           "Dimensions": null,
           "Form": null,
@@ -1688,6 +1716,7 @@
       {
         "attributes": {
           "OBJECTID_1": 31,
+          "AttachmentId": 133,
           "OBJECTID": 17,
           "Dimensions": null,
           "Form": null,
@@ -1727,6 +1756,7 @@
       {
         "attributes": {
           "OBJECTID_1": 32,
+          "AttachmentId": 86,
           "OBJECTID": 18,
           "Dimensions": null,
           "Form": null,
@@ -1766,6 +1796,7 @@
       {
         "attributes": {
           "OBJECTID_1": 33,
+          "AttachmentId": 28,
           "OBJECTID": 19,
           "Dimensions": null,
           "Form": null,
@@ -1805,6 +1836,7 @@
       {
         "attributes": {
           "OBJECTID_1": 34,
+          "AttachmentId": 134,
           "OBJECTID": 20,
           "Dimensions": null,
           "Form": null,
@@ -1844,6 +1876,7 @@
       {
         "attributes": {
           "OBJECTID_1": 35,
+          "AttachmentId": 90,
           "OBJECTID": 21,
           "Dimensions": null,
           "Form": null,
@@ -1883,6 +1916,7 @@
       {
         "attributes": {
           "OBJECTID_1": 36,
+          "AttachmentId": 115,
           "OBJECTID": 22,
           "Dimensions": null,
           "Form": null,
@@ -1922,6 +1956,7 @@
       {
         "attributes": {
           "OBJECTID_1": 37,
+          "AttachmentId": 143,
           "OBJECTID": 23,
           "Dimensions": null,
           "Form": null,
@@ -1961,6 +1996,7 @@
       {
         "attributes": {
           "OBJECTID_1": 38,
+          "AttachmentId": 101,
           "OBJECTID": 24,
           "Dimensions": null,
           "Form": null,
@@ -2000,6 +2036,7 @@
       {
         "attributes": {
           "OBJECTID_1": 39,
+          "AttachmentId": 126,
           "OBJECTID": 25,
           "Dimensions": null,
           "Form": null,
@@ -2039,6 +2076,7 @@
       {
         "attributes": {
           "OBJECTID_1": 40,
+          "AttachmentId": 136,
           "OBJECTID": 26,
           "Dimensions": null,
           "Form": null,
@@ -2078,6 +2116,7 @@
       {
         "attributes": {
           "OBJECTID_1": 41,
+          "AttachmentId": 103,
           "OBJECTID": 27,
           "Dimensions": null,
           "Form": null,
@@ -2117,6 +2156,7 @@
       {
         "attributes": {
           "OBJECTID_1": 42,
+          "AttachmentId": 119,
           "OBJECTID": 28,
           "Dimensions": null,
           "Form": null,
@@ -2156,6 +2196,7 @@
       {
         "attributes": {
           "OBJECTID_1": 43,
+          "AttachmentId": 72,
           "OBJECTID": 29,
           "Dimensions": null,
           "Form": null,
@@ -2195,6 +2236,7 @@
       {
         "attributes": {
           "OBJECTID_1": 44,
+          "AttachmentId": 104,
           "OBJECTID": 30,
           "Dimensions": null,
           "Form": null,
@@ -2234,6 +2276,7 @@
       {
         "attributes": {
           "OBJECTID_1": 45,
+          "AttachmentId": 129,
           "OBJECTID": 31,
           "Dimensions": null,
           "Form": null,
@@ -2273,6 +2316,7 @@
       {
         "attributes": {
           "OBJECTID_1": 46,
+          "AttachmentId": 76,
           "OBJECTID": 32,
           "Dimensions": null,
           "Form": null,
@@ -2312,6 +2356,7 @@
       {
         "attributes": {
           "OBJECTID_1": 47,
+          "AttachmentId": 77,
           "OBJECTID": 33,
           "Dimensions": null,
           "Form": null,
@@ -2351,6 +2396,7 @@
       {
         "attributes": {
           "OBJECTID_1": 48,
+          "AttachmentId": 130,
           "OBJECTID": 34,
           "Dimensions": null,
           "Form": null,
@@ -2390,6 +2436,7 @@
       {
         "attributes": {
           "OBJECTID_1": 49,
+          "AttachmentId": 29,
           "OBJECTID": 36,
           "Dimensions": null,
           "Form": null,
@@ -2429,6 +2476,7 @@
       {
         "attributes": {
           "OBJECTID_1": 50,
+          "AttachmentId": 30,
           "OBJECTID": 37,
           "Dimensions": null,
           "Form": null,
@@ -2468,6 +2516,7 @@
       {
         "attributes": {
           "OBJECTID_1": 51,
+          "AttachmentId": 73,
           "OBJECTID": 39,
           "Dimensions": null,
           "Form": null,
@@ -2507,6 +2556,7 @@
       {
         "attributes": {
           "OBJECTID_1": 52,
+          "AttachmentId": 81,
           "OBJECTID": 40,
           "Dimensions": null,
           "Form": null,
@@ -2546,6 +2596,7 @@
       {
         "attributes": {
           "OBJECTID_1": 53,
+          "AttachmentId": 127,
           "OBJECTID": 41,
           "Dimensions": null,
           "Form": null,
@@ -2571,7 +2622,7 @@
           "DPWDATE": null,
           "DPW_MATERIAL": " ",
           "Memorial_address": "1605 Massachusetts Ave",
-          "Name_of_Memorial": "Bleustein, William",
+          "Name_of_Memorial": "Bluestein, William",
           "Public_private": "Public",
           "Event": "WWII",
           "Notes_1": "Names of those who did not return from WW II",
@@ -2585,6 +2636,7 @@
       {
         "attributes": {
           "OBJECTID_1": 54,
+          "AttachmentId": 137,
           "OBJECTID": 42,
           "Dimensions": null,
           "Form": null,
@@ -2624,6 +2676,7 @@
       {
         "attributes": {
           "OBJECTID_1": 55,
+          "AttachmentId": 92,
           "OBJECTID": 43,
           "Dimensions": null,
           "Form": null,
@@ -2663,6 +2716,7 @@
       {
         "attributes": {
           "OBJECTID_1": 56,
+          "AttachmentId": 74,
           "OBJECTID": 44,
           "Dimensions": null,
           "Form": null,
@@ -2702,6 +2756,7 @@
       {
         "attributes": {
           "OBJECTID_1": 57,
+          "AttachmentId": 141,
           "OBJECTID": 45,
           "Dimensions": null,
           "Form": null,
@@ -2741,6 +2796,7 @@
       {
         "attributes": {
           "OBJECTID_1": 58,
+          "AttachmentId": 97,
           "OBJECTID": 46,
           "Dimensions": null,
           "Form": null,
@@ -2780,6 +2836,7 @@
       {
         "attributes": {
           "OBJECTID_1": 59,
+          "AttachmentId": 123,
           "OBJECTID": 47,
           "Dimensions": null,
           "Form": null,
@@ -2819,6 +2876,7 @@
       {
         "attributes": {
           "OBJECTID_1": 60,
+          "AttachmentId": 85,
           "OBJECTID": 48,
           "Dimensions": null,
           "Form": null,
@@ -2858,6 +2916,7 @@
       {
         "attributes": {
           "OBJECTID_1": 61,
+          "AttachmentId": 111,
           "OBJECTID": 49,
           "Dimensions": null,
           "Form": null,
@@ -2897,6 +2956,7 @@
       {
         "attributes": {
           "OBJECTID_1": 62,
+          "AttachmentId": 117,
           "OBJECTID": 50,
           "Dimensions": null,
           "Form": null,
@@ -2936,6 +2996,7 @@
       {
         "attributes": {
           "OBJECTID_1": 63,
+          "AttachmentId": 91,
           "OBJECTID": 51,
           "Dimensions": null,
           "Form": null,
@@ -2975,6 +3036,7 @@
       {
         "attributes": {
           "OBJECTID_1": 64,
+          "AttachmentId": 99,
           "OBJECTID": 52,
           "Dimensions": null,
           "Form": null,
@@ -3014,6 +3076,7 @@
       {
         "attributes": {
           "OBJECTID_1": 65,
+          "AttachmentId": 113,
           "OBJECTID": 53,
           "Dimensions": null,
           "Form": null,
@@ -3053,6 +3116,7 @@
       {
         "attributes": {
           "OBJECTID_1": 66,
+          "AttachmentId": 83,
           "OBJECTID": 55,
           "Dimensions": null,
           "Form": null,
@@ -3092,6 +3156,7 @@
       {
         "attributes": {
           "OBJECTID_1": 67,
+          "AttachmentId": 94,
           "OBJECTID": 56,
           "Dimensions": null,
           "Form": null,
@@ -3131,6 +3196,7 @@
       {
         "attributes": {
           "OBJECTID_1": 68,
+          "AttachmentId": 138,
           "OBJECTID": 57,
           "Dimensions": null,
           "Form": null,
@@ -3170,6 +3236,7 @@
       {
         "attributes": {
           "OBJECTID_1": 69,
+          "AttachmentId": 78,
           "OBJECTID": 58,
           "Dimensions": null,
           "Form": null,
@@ -3209,6 +3276,7 @@
       {
         "attributes": {
           "OBJECTID_1": 70,
+          "AttachmentId": 108,
           "OBJECTID": 59,
           "Dimensions": null,
           "Form": null,
@@ -3248,6 +3316,7 @@
       {
         "attributes": {
           "OBJECTID_1": 71,
+          "AttachmentId": 131,
           "OBJECTID": 60,
           "Dimensions": null,
           "Form": null,
@@ -3287,6 +3356,7 @@
       {
         "attributes": {
           "OBJECTID_1": 72,
+          "AttachmentId": 82,
           "OBJECTID": 61,
           "Dimensions": null,
           "Form": null,
@@ -3326,6 +3396,7 @@
       {
         "attributes": {
           "OBJECTID_1": 73,
+          "AttachmentId": 89,
           "OBJECTID": 62,
           "Dimensions": null,
           "Form": null,
@@ -3365,6 +3436,7 @@
       {
         "attributes": {
           "OBJECTID_1": 74,
+          "AttachmentId": 71,
           "OBJECTID": 63,
           "Dimensions": null,
           "Form": null,
@@ -3404,6 +3476,7 @@
       {
         "attributes": {
           "OBJECTID_1": 75,
+          "AttachmentId": 80,
           "OBJECTID": 64,
           "Dimensions": null,
           "Form": null,
@@ -3443,6 +3516,7 @@
       {
         "attributes": {
           "OBJECTID_1": 76,
+          "AttachmentId": 122,
           "OBJECTID": 66,
           "Dimensions": null,
           "Form": null,
@@ -3482,6 +3556,7 @@
       {
         "attributes": {
           "OBJECTID_1": 77,
+          "AttachmentId": 102,
           "OBJECTID": 67,
           "Dimensions": null,
           "Form": null,
@@ -3521,6 +3596,7 @@
       {
         "attributes": {
           "OBJECTID_1": 78,
+          "AttachmentId": 84,
           "OBJECTID": 68,
           "Dimensions": null,
           "Form": null,
@@ -3560,6 +3636,7 @@
       {
         "attributes": {
           "OBJECTID_1": 79,
+          "AttachmentId": 114,
           "OBJECTID": 69,
           "Dimensions": null,
           "Form": null,
@@ -3599,6 +3676,7 @@
       {
         "attributes": {
           "OBJECTID_1": 80,
+          "AttachmentId": 31,
           "OBJECTID": 70,
           "Dimensions": null,
           "Form": null,
@@ -3677,6 +3755,7 @@
       {
         "attributes": {
           "OBJECTID_1": 82,
+          "AttachmentId": 32,
           "OBJECTID": 75,
           "Dimensions": null,
           "Form": null,
@@ -3755,6 +3834,7 @@
       {
         "attributes": {
           "OBJECTID_1": 84,
+          "AttachmentId": 36,
           "OBJECTID": 77,
           "Dimensions": null,
           "Form": null,
@@ -3794,6 +3874,7 @@
       {
         "attributes": {
           "OBJECTID_1": 85,
+          "AttachmentId": 43,
           "OBJECTID": 78,
           "Dimensions": null,
           "Form": null,
@@ -3858,6 +3939,7 @@
           "DPWDATE": 1642982400000,
           "DPW_MATERIAL": " ",
           "Memorial_address": "1 Bedford St",
+          "AttachmentId": 44,
           "Name_of_Memorial": "Buckman Tavern",
           "Public_private": "Public",
           "Event": "Revolution",
@@ -3989,6 +4071,7 @@
       {
         "attributes": {
           "OBJECTID_1": 90,
+          "AttachmentId": 45,
           "OBJECTID": 86,
           "Dimensions": null,
           "Form": null,
@@ -4223,6 +4306,7 @@
       {
         "attributes": {
           "OBJECTID_1": 96,
+          "AttachmentId": 46,
           "OBJECTID": 95,
           "Dimensions": null,
           "Form": null,
@@ -4262,6 +4346,7 @@
       {
         "attributes": {
           "OBJECTID_1": 97,
+          "AttachmentId": 47,
           "OBJECTID": 97,
           "Dimensions": null,
           "Form": null,
@@ -4301,6 +4386,7 @@
       {
         "attributes": {
           "OBJECTID_1": 98,
+          "AttachmentId": 48,
           "OBJECTID": 101,
           "Dimensions": null,
           "Form": null,
@@ -4340,6 +4426,7 @@
       {
         "attributes": {
           "OBJECTID_1": 99,
+          "AttachmentId": 49,
           "OBJECTID": 103,
           "Dimensions": null,
           "Form": null,
@@ -4379,6 +4466,7 @@
       {
         "attributes": {
           "OBJECTID_1": 100,
+          "AttachmentId": 50,
           "OBJECTID": 104,
           "Dimensions": null,
           "Form": null,
@@ -4418,6 +4506,7 @@
       {
         "attributes": {
           "OBJECTID_1": 101,
+          "AttachmentId": 51,
           "OBJECTID": 105,
           "Dimensions": null,
           "Form": null,
@@ -4457,6 +4546,7 @@
       {
         "attributes": {
           "OBJECTID_1": 102,
+          "AttachmentId": 52,
           "OBJECTID": 106,
           "Dimensions": null,
           "Form": null,
@@ -4482,7 +4572,7 @@
           "DPWDATE": 1641340800000,
           "DPW_MATERIAL": " ",
           "Memorial_address": "Battle Green",
-          "Name_of_Memorial": "Old Belfrey Marker",
+          "Name_of_Memorial": "Old Belfry Marker",
           "Public_private": "Public",
           "Event": "Revolution",
           "Notes_1": "In-ground Marker of the original location of the Belfry",
@@ -4535,6 +4625,7 @@
       {
         "attributes": {
           "OBJECTID_1": 104,
+          "AttachmentId": 54,
           "OBJECTID": 127,
           "Dimensions": null,
           "Form": null,
@@ -4574,6 +4665,7 @@
       {
         "attributes": {
           "OBJECTID_1": 105,
+          "AttachmentId": 55,
           "OBJECTID": 129,
           "Dimensions": null,
           "Form": null,
@@ -4613,6 +4705,7 @@
       {
         "attributes": {
           "OBJECTID_1": 106,
+          "AttachmentId": 56,
           "OBJECTID": 131,
           "Dimensions": null,
           "Form": null,
@@ -4652,6 +4745,7 @@
       {
         "attributes": {
           "OBJECTID_1": 107,
+          "AttachmentId": 57,
           "OBJECTID": 132,
           "Dimensions": null,
           "Form": null,
@@ -4691,6 +4785,7 @@
       {
         "attributes": {
           "OBJECTID_1": 108,
+          "AttachmentId": 58,
           "OBJECTID": 135,
           "Dimensions": null,
           "Form": null,
@@ -4730,6 +4825,7 @@
       {
         "attributes": {
           "OBJECTID_1": 109,
+          "AttachmentId": 59,
           "OBJECTID": 141,
           "Dimensions": null,
           "Form": null,
@@ -4847,6 +4943,7 @@
       {
         "attributes": {
           "OBJECTID_1": 112,
+          "AttachmentId": 61,
           "OBJECTID": 149,
           "Dimensions": null,
           "Form": null,
@@ -4964,6 +5061,7 @@
       {
         "attributes": {
           "OBJECTID_1": 115,
+          "AttachmentId": 62,
           "OBJECTID": null,
           "Dimensions": null,
           "Form": null,
@@ -5003,6 +5101,7 @@
       {
         "attributes": {
           "OBJECTID_1": 118,
+          "AttachmentId": 65,
           "OBJECTID": 1,
           "Dimensions": "3\"Hx4'Wx2'D.",
           "Form": null,
@@ -5032,50 +5131,11 @@
           "Public_private": "Public",
           "Event": "person",
           "Notes_1": null,
-          "x": null,
-          "y": null,
-          "coordinates": null,
+          "x": -71.237213,
+          "y": 42.457902,
+          "coordinates": "42.457902,-71.237213",
           "verified": "YES",
           "GOOGLE_MAP": "https://www.google.com/maps/search/?api=1&query=42.458025549,-71.23712837499994"
-        }
-      },
-      {
-        "attributes": {
-          "OBJECTID_1": 119,
-          "OBJECTID": null,
-          "Dimensions": "plaque 14\"x6\" on a granite(?) block 18\"x8\"x9\"tall",
-          "Form": null,
-          "DedicatedT": "Event",
-          "TYPE_": "Tree",
-          "VETERANTYPE": "REVOLUTION",
-          "First_Name": "Cindy",
-          "Last_Name": "Woolworth",
-          "Cell_phone": "7812442129",
-          "email": "cindress@gmail.com",
-          "Monu_descr": "Commemorative plaque at the base of a tree",
-          "DedicateBy": "Lexington Chapter NSDAR",
-          "Condition": "Excellent",
-          "Research": "Yes",
-          "created_user": null,
-          "created_date": null,
-          "last_edited_user": null,
-          "last_edited_date": null,
-          "GlobalID": "aa81b693-2d52-4ba1-b344-ef2a373b1ee0",
-          "Plaque_text": "LIBERTY TREE PLANTED BY LEXINGTON CHAPTER DAR - 1975 COMMEMORATING LEXINGTON BICENTENNIAL 1775-1975 FLORENCE TOWNE BERNIER, REGENT",
-          "JOIN_": null,
-          "Monument_History": "https://lexington.advantage-preservation.com/viewer/?k=liberty%20tree&i=f&by=1974&bdd=1970&d=05011974-05031974&m=between&ord=k1&fn=lexington_minute-men_usa_massachusetts_lexington_19740502_english_21&df=1&dt=2&cid=2857",
-          "DPWDATE": null,
-          "DPW_MATERIAL": null,
-          "Memorial_address": "Massachusetts Ave & Meriam St",
-          "Name_of_Memorial": "Liberty Tree",
-          "Public_private": "Public",
-          "Event": "Bicentennial of the Revolutionary War",
-          "Notes_1": "See 1974 article link; Planted 1974; Plaque assumed placed 1975; Plaque was refurbished and placed on a granite (?) block in 2001.",
-          "x": null,
-          "y": null,
-          "coordinates": null,
-          "verified": "YES",
-          "GOOGLE_MAP": null
         }
       }
     ]

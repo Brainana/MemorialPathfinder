@@ -44,6 +44,7 @@ function getShortestPath(travelMode) {
 
     updateTravelModeButton(travelMode);
 
+    adjustMapBound(true, true);
 
     var origins = [startingPointLocation];
 
@@ -266,6 +267,15 @@ function clearRenderedRoutes() {
 
     for (var memorialId in memorialSelected) {
         memorialSelected[memorialId].marker.setIcon(null);
+
+        var pinIcon = new google.maps.MarkerImage(
+            "./images/" +  memorialSelected[memorialId].type + ".png",
+            null, /* size is determined at runtime */
+            null, /* origin is 0,0 */
+            null, /* anchor is bottom center of the scaled image */
+            new google.maps.Size(36, 36)
+        ); 
+        memorialSelected[memorialId].marker.setIcon(pinIcon);
     }
     directionsRenderers.forEach(function(directionsRenderer) {
         directionsRenderer.setMap(null);

@@ -5,15 +5,24 @@ function switchToMapView(enable) {
     rightPanel.style.display = enable ? "block" : "none";
 }
 
-function adjustMapBound() {
+function adjustMapBound(includeStartingPoint, includeMemorials) {
     var bounds = new google.maps.LatLngBounds();
 
-    if (startingPointMarker) {
+    var hasMarker = false;
+    if (includeStartingPoint && startingPointMarker) {
         bounds.extend(startingPointMarker.getPosition());
+        hasMarker = true;
     }
 
-    for (var memorialId in memorialSelected) {
-        bounds.extend(memorialSelected[memorialId].marker.getPosition());
+    if (includeMemorials) {
+        for (var memorialId in memorialSelected) {
+            hasMarker = true;
+            bounds.extend(memorialSelected[memorialId].marker.getPosition());
+        }
+    }
+
+    if (!hasMarker) {
+        bounds.extend(lexingtonVisitorCenter);
     }
 
     map.fitBounds(bounds);
