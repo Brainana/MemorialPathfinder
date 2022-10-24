@@ -24,7 +24,7 @@ function getShortestPath(travelMode) {
 
     let startingPoint =  document.querySelector("#startingPoint");
 
-    if (startingPointLocation === undefined ) {
+    if (startingPointLocation === undefined) {
         startingPoint.classList = "form-control is-invalid";
         return;
     }

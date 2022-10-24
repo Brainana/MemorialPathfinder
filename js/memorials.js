@@ -1,6 +1,7 @@
 
 var memorialTypeCode2Name = {};
 var memorials;
+var lastOpenInfoWindow;
 
 fetch("./data/memorials.json")
   .then(response => response.json())
@@ -22,6 +23,9 @@ fetch("./data/memorials.json")
     memorials.forEach(function(memorial) {
         memorial = memorial.attributes;
         let type = memorial.TYPE_;
+        if (memorial.DedicatedT === "Person" && (memorial.Monu_descr === "Cary Hall" || memorial.Monu_descr === "1605 Massachusetts Ave")) {
+            return;
+        }
         if (type !== undefined) {
             if (memorialsByType[type] === undefined) {
                 memorialsByType[type] = [memorial];
@@ -115,16 +119,21 @@ function handleMemorialClick(event) {
             contentString += '<div class="fs-6">' + history + "</div>"; 
         }
 
-        var infowindow;
+        var infoWindow;
         if (contentString) {
-            infowindow = new google.maps.InfoWindow({
+            infoWindow = new google.maps.InfoWindow({
                 content: contentString,
                 ariaLabel: memorial.Name_of_Memorial,
                 maxWidth: 600
             });
 
             marker.addListener("click", () => {
-                infowindow.open({
+                if (lastOpenInfoWindow) {
+                    lastOpenInfoWindow.close();
+                }
+
+                lastOpenInfoWindow = infoWindow;
+                infoWindow.open({
                 anchor: marker,
                 map,
                 });
@@ -138,8 +147,8 @@ function handleMemorialClick(event) {
             type: type
         }
         
-        if (infowindow) {
-            memorialSelected[memorialCheckBox.id].infowindow = infowindow;
+        if (infoWindow) {
+            memorialSelected[memorialCheckBox.id].infowindow = infoWindow;
         }
 
     } else {
@@ -184,11 +193,15 @@ function createMemorialsByType(memorialsByType) {
     let accordion =  document.querySelector("#memorial-types");
     for(let type in memorialsByType) {
         let memorials = memorialsByType[type];
+        memorials.sort(function(a, b){return a.Name_of_Memorial.localeCompare(b.Name_of_Memorial)});
         let checkboxes ="";
         memorials.forEach(function(memorial) {
+            var memorialName = memorial.Name_of_Memorial.replace(/[\u00A0-\u9999<>\&]/g, function(i) {
+                return '&#'+i.charCodeAt(0)+';';
+            });
             checkboxes += `
                 <div class="form-check">
-                    <input class="form-check-input memorial-check-box" type="checkbox" value="${memorial.Name_of_Memorial}" id="${memorial.OBJECTID_1}" lng="${memorial.x}" 
+                    <input class="form-check-input memorial-check-box" type="checkbox" value='${memorialName}' id="${memorial.OBJECTID_1}" lng="${memorial.x}" 
                         lat="${memorial.y}" memorialtype="${memorial.TYPE_}" onclick='handleMemorialClick(event);'>
                     <label class="form-check-label" for="flexCheckDefault">
                         ${memorial.Name_of_Memorial}

@@ -25,6 +25,10 @@ function initMap() {
             .then(response => response.json())
             .then(function(json) {
                 console.log(json);
+
+                shortestRouteGenerated = false;
+                clearRenderedRoutes();
+                updateTravelModeButton("");
                 
                 if (startingPointMarker) {
                     startingPointMarker.setMap(null);
@@ -48,10 +52,10 @@ function initMap() {
 
     // Create a bounding box with sides ~10km away from the center point
     const defaultBounds = {
-        north: lexingtonVisitorCenter.lat + 0.1,
-        south: lexingtonVisitorCenter.lat - 0.1,
-        east: lexingtonVisitorCenter.lng + 0.1,
-        west: lexingtonVisitorCenter.lng - 0.1,
+        north: lexingtonVisitorCenter.lat() + 0.1,
+        south: lexingtonVisitorCenter.lat() - 0.1,
+        east: lexingtonVisitorCenter.lng() + 0.1,
+        west: lexingtonVisitorCenter.lng() - 0.1,
     };
     const options = {
         bounds: defaultBounds,
