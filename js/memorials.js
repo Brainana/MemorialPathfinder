@@ -48,7 +48,7 @@ function closeExceedAllowedMemorialsAlert() {
     alert.style.display = "none";
 }
 
-function handleMemorialClick(event) {
+async function handleMemorialClick(event) {
     let memorialCheckBox = event.currentTarget;
 
     // Check if the user picked more than 10 memorials
@@ -100,7 +100,7 @@ function handleMemorialClick(event) {
         var memorial = memorials.filter(memorial => memorial.attributes.OBJECTID_1 === parseInt(id))[0];
         var plaqueText = memorial.attributes.Plaque_text;
         var description = memorial.attributes.Monu_descr;
-        var attachmentUrl = getAttachmentUrl(memorial);
+        var attachmentUrl = await getAttachmentUrl(memorial);
         var history = memorial.attributes.Monument_History;
         var contentString = "";
         if (attachmentUrl) {
@@ -163,31 +163,32 @@ function handleMemorialClick(event) {
     adjustMapBound(false, true);
 }
 
-// async function getAttachmentUrl(memorialId) {
-//     var baseAttachmentUrl = "https://services.arcgis.com/bP0owepHkr9WxF4V/arcgis/rest/services/Monument_plaques_Verified/FeatureServer/0/" + memorialId + "/attachments";
-//     var getAttachmentInfoUrl = baseAttachmentUrl + "?f=json";
-//     var resp = await fetch(getAttachmentInfoUrl);
-//     var json = resp.json();
-//     var attachmentInfos = json.attachmentInfos;
-//     var attachmentId;
-//     if (attachmentInfos.length > 0) {
-//         attachmentId = attachmentInfos[0].id;
-//     }
-//     if (attachmentId) {
-//         return baseAttachmentUrl + "/" + attachmentId + "?width=200";
-//     } 
-//     return null;
-// }
-
-function getAttachmentUrl(memorial) {
-    var memorialId = memorial.attributes.OBJECTID_1;
-    var attachmentId = memorial.attributes.AttachmentId;
+async function getAttachmentUrl(memorial) {
+    var memorialId = memorial.attributes.OBJECTID_1
+    var baseAttachmentUrl = "https://services.arcgis.com/bP0owepHkr9WxF4V/arcgis/rest/services/Monument_plaques_Verified/FeatureServer/0/" + memorialId + "/attachments";
+    var getAttachmentInfoUrl = baseAttachmentUrl + "?f=json";
+    var resp = await fetch(getAttachmentInfoUrl);
+    var json = await resp.json();
+    var attachmentInfos = json.attachmentInfos;
+    var attachmentId;
+    if (attachmentInfos.length > 0) {
+        attachmentId = attachmentInfos[0].id;
+    }
     if (attachmentId) {
-        var baseAttachmentUrl = "https://services.arcgis.com/bP0owepHkr9WxF4V/arcgis/rest/services/Monument_plaques_Verified/FeatureServer/0/" + memorialId + "/attachments";
-        return baseAttachmentUrl + "/" + attachmentId + "?width=400";
+        return baseAttachmentUrl + "/" + attachmentId + "?width=200";
     } 
     return null;
 }
+
+// function getAttachmentUrl(memorial) {
+//     var memorialId = memorial.attributes.OBJECTID_1;
+//     var attachmentId = memorial.attributes.AttachmentId;
+//     if (attachmentId) {
+//         var baseAttachmentUrl = "https://services.arcgis.com/bP0owepHkr9WxF4V/arcgis/rest/services/Monument_plaques_Verified/FeatureServer/0/" + memorialId + "/attachments";
+//         return baseAttachmentUrl + "/" + attachmentId + "?width=400";
+//     } 
+//     return null;
+// }
 
 function createMemorialsByType(memorialsByType) {
     let accordion =  document.querySelector("#memorial-types");
