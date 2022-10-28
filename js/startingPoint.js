@@ -1,5 +1,14 @@
 document.querySelector("#startingPoint").addEventListener('change', onStartingPointChange);
 
+function setPlaceHolderText() {
+    var startingPoint = document.querySelector("#startingPoint");
+    if (window.innerWidth >= 770) {
+        startingPoint.placeholder = "Enter a location, or click on the map";
+    }
+}
+
+setPlaceHolderText();
+
 function onStartingPointChange() {
     // Need a delay for the autocomplete to fill in the address.
     setTimeout(onStartingPointChangeHelper, 100);
