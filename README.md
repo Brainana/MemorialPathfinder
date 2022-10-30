@@ -1,1 +1,2 @@
-# MemorialsShortestPath
+# Memorial Pathfinder
+This project generates the quickest route between a set of memorials in Lexington selected by the user. We noticed that tourists often only visit the major monuments and memorials near the visitor center in town so we wanted to encourage them to visit other monuments and/or memorials throughout our town. We hope that this project helps visitors gain a deeper understanding of the town’s history as well as helping to revive the stories of the town’s forgotten heroes, in addition to saving them valuable time that would've been wasted on trying to navigate the scarcely documented historic sites. You can get started by going here: https://brainana.github.io/MemorialPathfinder/
