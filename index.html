@@ -1,92 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Memorials Shortest Path</title>
-    <link rel="icon" type="image/x-icon" href="https://www.lexingtonma.gov/images/favicon.ico">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/map.css">
-    <link rel="stylesheet" href="css/memorials.css">
-    <link rel="stylesheet" href="css/direction.css">
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.lexingtonma.gov/images/favicon.ico"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/map.css" />
+    <link rel="stylesheet" href="css/memorials.css" />
+    <link rel="stylesheet" href="css/direction.css" />
+  </head>
+  <body>
     <div class="container-fluid d-flex h-100 flex-column">
-        <p class="fs-3 fw-bolder text-center">Lexington Memorial Pathfinder</p>
+      <p class="fs-3 fw-bolder text-center">Lexington Memorial Pathfinder</p>
 
-        <div class="flex-fill d-flex flex-row flex-wrap main-panel">  
-            <div id="left-panel" class="h-100">
-              <div id="locations-picker-panel" class="h-100">
-                <div class="btn-group position-relative top-0 start-50 translate-middle-x" role="group" aria-label="travel mode" id="travel-mode">
-                  <button id="driving" class="btn btn-light btn-sm" data-bs-toggle="button" onclick="getShortestPath('driving')">
-                    <img id="driving-travel-mode" src="//maps.gstatic.com/consumer/images/icons/2x/directions_car_grey800_24dp.png"/>
-                  </button>
-                  <button id="walking" class="btn btn-light btn-sm" data-bs-toggle="button" onclick="getShortestPath('walking')">
-                    <img id="walking-travel-mode" src="//maps.gstatic.com/consumer/images/icons/2x/directions_walk_grey800_24dp.png"/>
-                  </button>
-                  <button id="bicycling" class="btn btn-light btn-sm" data-bs-toggle="button" onclick="getShortestPath('bicycling')">
-                    <img id="walking-travel-mode" src="//maps.gstatic.com/consumer/images/icons/2x/directions_bike_grey800_24dp.png"/>
-                  </button>
-                </div>
+      <div class="flex-fill d-flex flex-row flex-wrap main-panel">
+        <div id="left-panel" class="h-100">
+          <div id="locations-picker-panel" class="h-100">
+            <div
+              class="btn-group position-relative top-0 start-50 translate-middle-x"
+              role="group"
+              aria-label="travel mode"
+              id="travel-mode"
+            >
+              <button
+                id="driving"
+                class="btn btn-light btn-sm"
+                data-bs-toggle="button"
+                onclick="getShortestPath('driving')"
+              >
+                <img
+                  id="driving-travel-mode"
+                  src="//maps.gstatic.com/consumer/images/icons/2x/directions_car_grey800_24dp.png"
+                />
+              </button>
+              <button
+                id="walking"
+                class="btn btn-light btn-sm"
+                data-bs-toggle="button"
+                onclick="getShortestPath('walking')"
+              >
+                <img
+                  id="walking-travel-mode"
+                  src="//maps.gstatic.com/consumer/images/icons/2x/directions_walk_grey800_24dp.png"
+                />
+              </button>
+              <button
+                id="bicycling"
+                class="btn btn-light btn-sm"
+                data-bs-toggle="button"
+                onclick="getShortestPath('bicycling')"
+              >
+                <img
+                  id="walking-travel-mode"
+                  src="//maps.gstatic.com/consumer/images/icons/2x/directions_bike_grey800_24dp.png"
+                />
+              </button>
+            </div>
 
-                <!-- <button class="btn btn-light float-end" onclick="switchToMapView(true)">
+            <!-- <button class="btn btn-light float-end" onclick="switchToMapView(true)">
                   <img class="google-map-button" src="./images/google_map.png"/>
                 </button> -->
-                
-                <div id="startingPointContainer" class="mb-3 mt-3">
-                  <label for="startingPoint" class="form-label fw-bolder">Starting point:</label>
-                  <button title="Locate Me" id="locate-me-btn" class="btn btn-light m-1" data-loading-text="Locating…" onclick="onLocateMe()">
-                    <img class="locate-me-icon" src="./images/locate_me.png">
-                    <span>Locate Me</span>
-                  </button>
-                  <input type="text" class="form-control" id="startingPoint">
-                  <div class="invalid-feedback">
-                    Please choose a valid address.
-                  </div>
-                </div>
-                <p id="pick-memorials-label" class="fw-bolder">Pick Monuments and Memorials to visit:</p>
-                <div class="accordion" id="memorial-types"></div>
-                <div id="exceed-allowed-memorials" class="position-absolute">
-                  <div class="alert alert-warning">
-                    <button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="true" onclick="closeExceedAllowedMemorialsAlert()">
-                        ×
-                    </button> 
-                    Maximum 10 memorials are allowed
-                </div>
-                </div>
-              </div>
-              <div id="directions-panel" class="h-100" style="display:none">
-                <button class="back-to-location-picker btn btn-light" onclick="goBackToLocationPicker()">
-                  <img src="./images/back_arrow.png">
-                  <span class="fw-bolder text-dark">Locations picker</span>
+
+            <div id="startingPointContainer" class="mb-3 mt-3">
+              <label for="startingPoint" class="form-label fw-bolder"
+                >Starting point:</label
+              >
+              <button
+                title="Locate Me"
+                id="locate-me-btn"
+                class="btn btn-light m-1"
+                data-loading-text="Locating…"
+                onclick="onLocateMe()"
+              >
+                <img class="locate-me-icon" src="./images/locate_me.png" />
+                <span>Locate Me</span>
+              </button>
+              <input type="text" class="form-control" id="startingPoint" />
+              <div class="invalid-feedback">Please choose a valid address.</div>
+            </div>
+            <p id="pick-memorials-label" class="fw-bolder">
+              Pick Monuments and Memorials to visit:
+            </p>
+            <div class="accordion" id="memorial-types"></div>
+            <div id="exceed-allowed-memorials" class="position-absolute">
+              <div class="alert alert-warning">
+                <button
+                  type="button"
+                  class="close close-alert"
+                  data-dismiss="alert"
+                  aria-hidden="true"
+                  onclick="closeExceedAllowedMemorialsAlert()"
+                >
+                  ×
                 </button>
-                <a id="start-navigation" class="btn btn-light" href="#" role="button" target="_blank">
-                  <img src="./images/start_navigation.png">
-                  <span class="fw-bolder text-dark">Start navigation</span>
-                </a>
-                <!-- <button class="btn btn-light float-start" onclick="switchToMapView(true)">
-                  <img class="google-map-button" src="./images/google_map.png"/>
-                </button> -->
-                <div id="directions" class="w-100"></div>
+                Maximum 10 memorials are allowed
               </div>
             </div>
-            <div id="right-panel" class="flex-fill ms-1 h-100">
-              <button id="hide_map_view" class="back-to-location-picker btn btn-info" onclick="switchToMapView(false)">
-                <span class="fw-bolder text-dark">Locations Picker</span>
-              </button>              
-              <div id="map"></div>
-            </div>
+          </div>
+          <div id="directions-panel" class="h-100" style="display: none">
+            <button
+              class="back-to-location-picker btn btn-light"
+              onclick="goBackToLocationPicker()"
+            >
+              <img src="./images/back_arrow.png" />
+              <span class="fw-bolder text-dark">Locations picker</span>
+            </button>
+            <a
+              id="start-navigation"
+              class="btn btn-light"
+              href="#"
+              role="button"
+              target="_blank"
+            >
+              <img src="./images/start_navigation.png" />
+              <span class="fw-bolder text-dark">Start navigation</span>
+            </a>
+            <!-- <button class="btn btn-light float-start" onclick="switchToMapView(true)">
+                  <img class="google-map-button" src="./images/google_map.png"/>
+                </button> -->
+            <div id="directions" class="w-100"></div>
+          </div>
         </div>
-    </div> 
+        <div id="right-panel" class="flex-fill ms-1 h-100">
+          <button
+            id="hide_map_view"
+            class="back-to-location-picker btn btn-info"
+            onclick="switchToMapView(false)"
+          >
+            <span class="fw-bolder text-dark">Locations Picker</span>
+          </button>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEd7Y6AiDJa52rS98IReIb1CWRbMKsMp4&callback=initMap&v=weekly&libraries=places"
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-1X1R0quJ38E2PuLAGrpxkZEYGBnam80&callback=initMap&v=weekly&libraries=places"
       defer
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/main.js"></script>
     <script src="js/permutations.js"></script>
     <script src="js/memorials.js"></script>

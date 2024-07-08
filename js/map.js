@@ -20,7 +20,7 @@ function initMap() {
         console.log(event);
 
         let reverseGeoCodingUrl = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + 
-            event.latLng.lat() + "," + event.latLng.lng() + "&key=AIzaSyCEd7Y6AiDJa52rS98IReIb1CWRbMKsMp4";
+            event.latLng.lat() + "," + event.latLng.lng() + "&key=AIzaSyA-1X1R0quJ38E2PuLAGrpxkZEYGBnam80";
         fetch(reverseGeoCodingUrl)
             .then(response => response.json())
             .then(function(json) {

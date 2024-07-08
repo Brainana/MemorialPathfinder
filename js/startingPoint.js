@@ -29,7 +29,7 @@ function onStartingPointChangeHelper() {
     if (startingPoint.value == "") return;
 
     let geoCodingUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=" + 
-        encodeURI(startingPoint.value) + "&key=AIzaSyCEd7Y6AiDJa52rS98IReIb1CWRbMKsMp4";
+        encodeURI(startingPoint.value) + "&key=AIzaSyA-1X1R0quJ38E2PuLAGrpxkZEYGBnam80";
     fetch(geoCodingUrl)
     .then(response => response.json())
     .then(function(json) {
